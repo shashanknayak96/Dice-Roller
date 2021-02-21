@@ -34,4 +34,10 @@ export class DiceServiceService {
     this.scoreChanged.next(this.scores.slice());
   }
 
+  getScoreTotal(){
+    return this.scores.reduce((acc, curr) => {
+      return acc+curr;
+    })
+  }
+
 }

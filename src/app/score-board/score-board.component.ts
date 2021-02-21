@@ -9,6 +9,7 @@ import { DiceServiceService } from '../dice-service.service';
 export class ScoreBoardComponent implements OnInit{
 
   scores: Array<number>;
+  totalScore: number;
 
   constructor(private svDice: DiceServiceService) { }
   
@@ -18,7 +19,14 @@ export class ScoreBoardComponent implements OnInit{
       .subscribe((number)=> {
         this.scores = number;
       })
+
+    this.svDice.gameOver
+      .subscribe(() => {
+        this.totalScore = this.svDice.getScoreTotal();
+      })
   }
+
+
 
 
 }
