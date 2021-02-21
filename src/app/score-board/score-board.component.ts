@@ -12,7 +12,6 @@ export class ScoreBoardComponent implements OnInit{
   totalScore: number;
 
   constructor(private svDice: DiceServiceService) { }
-  
 
   ngOnInit(){
     this.svDice.scoreChanged
@@ -25,8 +24,4 @@ export class ScoreBoardComponent implements OnInit{
         this.totalScore = this.svDice.getScoreTotal();
       })
   }
-
-
-
-
 }
