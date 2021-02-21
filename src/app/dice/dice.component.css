@@ -1,0 +1,21 @@
+.diceface{
+    display: flex;
+    justify-content: center; 
+    background-color: rgb(255, 255, 255);
+    border: 5px solid black;
+    border-radius: 25px;
+    width: 500px;
+    height: 500px;
+}
+
+.diceCircle{
+    border: 2px solid black;
+    background-color: rgb(238, 81, 81);
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+.hide{
+    visibility: hidden;
+}

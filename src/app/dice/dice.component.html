@@ -1,0 +1,64 @@
+<br>
+
+<div  class="h-100 w-100 d-flex justify-content-center align-items-center test">
+  <div [@shake]="shake" class="diceface">
+
+    <!-- One -->
+    <div *ngIf="number === 1" #one>
+      <div class="diceCircle" style="margin-top: 200px; "></div>
+    </div>
+
+    <!-- Two -->
+    <div *ngIf="number === 2" #two>
+      <div class="diceCircle" style="position: absolute; margin-top: 75px; margin-left: 75px;"></div>
+      <div class="diceCircle" style="position: absolute; margin-top: 325px; margin-left: -175px;"></div>
+    </div>
+
+    <!-- Three -->
+    <div *ngIf="number === 3" #three>
+      <div class="diceCircle " style="position: absolute; margin-top: 75px; margin-left: 75px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 200px; margin-left: -50px"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 325px; margin-left: -175px;"></div>
+    </div>
+
+    <!-- Four -->
+    <div *ngIf="number === 4" #four>
+      <div class="diceCircle " style="position: absolute; margin-top: 75px; margin-left: 75px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 75px; margin-left: -175px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 325px; margin-left: -175px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 325px; margin-left: 75px;"></div>
+    </div>
+
+    <!-- Five -->
+    <div *ngIf="number === 5" #five>
+      <div class="diceCircle " style="position: absolute; margin-top: 75px; margin-left: 75px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 75px; margin-left: -175px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 200px; margin-left: -50px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 325px; margin-left: -175px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 325px; margin-left: 75px;"></div>
+    </div>
+    <!-- Six -->
+    <div *ngIf="number === 6" #six>
+      <div class="diceCircle " style="position: absolute; margin-top: 75px; margin-left: 75px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 75px; margin-left: -175px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 200px; margin-left: 75px"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 200px; margin-left: -175px"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 325px; margin-left: -175px;"></div>
+      <div class="diceCircle " style="position: absolute; margin-top: 325px; margin-left: 75px;"></div>
+    </div>
+
+  </div>
+</div>
+<br>
+<div class="row ">
+  <div class="d-flex justify-content-center align-items-center col-xl-12">
+    <button 
+      class="btn btn-success" 
+      style="padding-left: 25px; padding-right: 25px;" 
+      (click)="rollDice()" 
+      [disabled]="gameOver"
+      >
+      Roll
+    </button>
+  </div>
+</div>
