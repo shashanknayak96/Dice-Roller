@@ -26,7 +26,12 @@ export class DiceServiceService {
     if(this.scores.length >= 10){
       this.gameOver.next();
     }
-    this.scoreChanged.next(this.scores);
+    this.scoreChanged.next(this.scores.slice());
   } 
+
+  resetScore(){
+    this.scores = [];
+    this.scoreChanged.next(this.scores.slice());
+  }
 
 }

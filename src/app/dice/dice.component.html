@@ -60,5 +60,14 @@
       >
       Roll
     </button>
+
+    <button 
+    class="btn btn-danger" 
+    style="margin-left: 10px; padding-left: 25px; padding-right: 25px;" 
+    (click)="resetDice()" 
+    *ngIf="gameOver"
+    >
+    Reset
+  </button>
   </div>
 </div>

@@ -38,5 +38,9 @@ export class DiceComponent implements OnInit{
     this.shake = !this.shake;
   }
 
+  resetDice(){
+    this.svDice.resetScore();
+    this.gameOver = false;
+  }
 
 }
